@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+      <!-- Parallax -->
+    <section>
+        <img src="./image/bg1.jpg" alt="" id="bg">
+        <img src="./image/moon.png" alt="" id="moon">
+        <img src="./image/mountain.png" alt="" id="mountain">
+        <img src="./image/road.png" alt="" id="road">
+        <h2 id="text">MOON LIGHT</h2>
+    </section>
+
+    <!-- content -->
+
+    <section class="content-section">
+
+        <h1>Parallax Website</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quae quis libero nam odio dicta labore quidem asperiores nostrum, ut mollitia laborum autem ipsa voluptates, animi numquam iure harum ratione!
+            Soluta aut quod neque earum maiores tempora ipsa, sint minima, praesentium iusto corporis iure nisi eos nihil porro dolores? Dolorem sint numquam consequatur? Laudantium totam atque laboriosam, nemo aspernatur numquam!
+            Sunt et, distinctio mollitia quidem similique ducimus quas aliquam aspernatur dolor id qui repudiandae deserunt facere accusamus nam quasi dolorum incidunt illo, nihil deleniti pariatur tempora consectetur. Impedit, ab quos!
+            Repudiandae placeat cupiditate ipsam, qui assumenda sequi expedita animi quidem dicta harum, corporis ad dolorem inventore et laborum maxime. Corrupti laudantium ut dignissimos quisquam doloribus illum nihil, ex enim vero!
+            Qui ex veniam dolore fuga rem officia, dolor quidem id voluptatum alias distinctio obcaecati sequi cumque. Perspiciatis inventore optio laboriosam corrupti, eius natus repellendus voluptas reiciendis et commodi, a magnam.
+            Sequi nobis ipsa obcaecati ullam repellat deserunt nulla neque. Repudiandae aliquid expedita magni hic quidem eius similique alias, soluta delectus corporis nesciunt sed rerum vitae, explicabo beatae! Numquam, ipsam aperiam.
+            Consequuntur velit, doloribus dolorem cupiditate error quasi eum ad unde illum facilis expedita quaerat aperiam ratione non cumque ipsa omnis accusamus itaque similique? Alias quis animi, odit praesentium provident dolore.</p>
+
+    </section>
+
+
+    <Script type="text/javascript">
+        let bg = document.getElementById("bg")
+        let moon = document.getElementById("moon")
+        let mountain = document.getElementById("mountain")
+        let road = document.getElementById("road")
+        let text = document.getElementById("text")
+
+        window.addEventListener('scroll',function(){
+            var value = window.scrollY
+            bg.style.top = value*0.5+'px'
+            moon.style.left = -value*0.5+'px'
+            mountain.style.top = -value*0.15+'px'
+            road.style.top = value*0.15+'px'
+            text.style.top = value*1+'px'
+        })
+    </Script>
+</body>
+</html>
